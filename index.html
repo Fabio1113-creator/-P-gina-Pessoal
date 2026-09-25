@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fábio Souza | Página Pessoal</title>
+
+    <style>
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background-color: #0f172a;
+            color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 8%;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header div {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* =========================
+           HERO / INÍCIO
+        ========================= */
+
+        #inicio {
+            min-height: 80vh;
+
+            background-color: #0f172a;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+        }
+
+        #inicio h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        #inicio h1 span {
+            color: #3b82f6;
+        }
+
+        #inicio p {
+            max-width: 700px;
+            font-size: 19px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .botao {
+            background-color: #2563eb;
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #0f172a;
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================
+           SOBRE MIM
+        ========================= */
+
+        #sobre {
+            background-color: white;
+        }
+
+        .sobre-conteudo {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .sobre-conteudo p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           INTERESSES
+        ========================= */
+
+        #interesses {
+            background-color: #f1f5f9;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+
+            width: 280px;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HABILIDADES
+        ========================= */
+
+        #habilidades {
+            background-color: white;
+        }
+
+        .habilidades-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .habilidade-grupo {
+            width: 350px;
+        }
+
+        .habilidade-grupo h3 {
+            color: #2563eb;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .habilidade-grupo ul {
+            list-style: none;
+        }
+
+        .habilidade-grupo li {
+            background-color: #f1f5f9;
+
+            margin-bottom: 10px;
+
+            padding: 12px;
+
+            border-radius: 8px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           GITHUB
+        ========================= */
+
+        #github {
+            background-color: #0f172a;
+            color: white;
+
+            text-align: center;
+        }
+
+        #github h2 {
+            color: white;
+        }
+
+        #github p {
+            margin-bottom: 25px;
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #020617;
+
+            color: #94a3b8;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #inicio h1 {
+                font-size: 36px;
+            }
+
+            #inicio p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
+
+    <header>
+
+        <div>Fábio Souza da Cruz</div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#interesses">Interesses</a>
+            <a href="#habilidades">Habilidades</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================= -->
+
+    <main>
+
+
+        <!-- =========================
+             INÍCIO
+        ========================= -->
+
+        <section id="inicio">
+
+            <h1>
+                Olá, sou <span>Fábio</span>
+            </h1>
+
+            <p>
+                Sou estudante e estou desenvolvendo meus conhecimentos
+                em tecnologia e desenvolvimento web. Este é o meu
+                projeto de página pessoal criado utilizando HTML e CSS.
+            </p>
+
+            <a class="botao" href="#sobre">
+                Conheça mais sobre mim
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE MIM
+        ========================= -->
+
+        <section id="sobre">
+
+            <h2>Sobre Mim</h2>
+
+            <div class="sobre-conteudo">
+
+                <p>
+                    Meu nome é Fábio Souza da Cruz e sou estudante
+                    interessado na área de tecnologia.
+                </p>
+
+                <p>
+                    Estou aprendendo desenvolvimento web e buscando
+                    melhorar meus conhecimentos em programação,
+                    criação de sites e novas tecnologias.
+                </p>
+
+                <p>
+                    Meu objetivo é continuar estudando e desenvolver
+                    projetos que me ajudem a evoluir profissionalmente
+                    na área de tecnologia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTERESSES
+        ========================= -->
+
+        <section id="interesses">
+
+            <h2>Meus Interesses e Objetivos</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>💻 Tecnologia</h3>
+
+                    <p>
+                        Tenho interesse em tecnologia,
+                        programação e desenvolvimento de sistemas de automação de robótica.
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🌐 Desenvolvimento Web</h3>
+
+                    <p>
+                        Quero aprender cada vez mais sobre criação
+                        de sites e aplicações web.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>🎯 Meus Objetivos</h3>
+
+                    <p>
+                        Continuar estudando, adquirir experiência
+                        e crescer profissionalmente na área de TI.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HABILIDADES
+        ========================= -->
+
+        <section id="habilidades">
+
+            <h2>Habilidades e Tecnologias</h2>
+
+            <div class="habilidades-container">
+
+
+                <article class="habilidade-grupo">
+
+                    <h3>Já conheço</h3>
+
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Git</li>
+                        <li>JavaScript</li>
+                        <li>GitHub</li>
+                        <li>SQL</li>
+                    </ul>
+
+                </article>
+
+
+                <article class="habilidade-grupo">
+
+                    <h3>Quero aprender</h3>
+
+                    <ul>
+                        <li>OEE</li>
+                        <li>Python</li>
+                        <li>KRL</li>
+                        <li>URScript</li>
+                        <li>Indústria 4.0</li>
+                        <li>React</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GITHUB
+        ========================= -->
+
+        <section id="github">
+
+            <h2>Meu Projeto</h2>
+
+            <p>
+                Esta página foi desenvolvida como atividade acadêmica
+                utilizando HTML e CSS, com versionamento através do Git
+                e publicação do projeto no GitHub.
+            </p>
+
+            <a class="botao" href="https://github.com/Fabio1113-creator" target="_blank">
+                Ver projeto no GitHub
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Fábio Souza da Cruz - Página Pessoal
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
